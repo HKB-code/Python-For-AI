@@ -113,3 +113,13 @@ try:
     open("m.txt")
 except FileNotFoundError:
     print("File does not exist")
+
+
+# //////////////////////////////////////////////////
+# Why close()?
+# we have to tell the os that the file work is done, and if we forget to close, resources can be wasted 
+# The OS allocates certain resources for the file:
+# File Descriptor (FD) — A number used to identify the file
+# Memory Buffers — To temporarily store data being read or written
+# Kernel Data Structures — Internal tracking information maintained by the OS
+# File Locks (occasionally) — To prevent conflicts with other programs
